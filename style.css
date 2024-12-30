@@ -1,0 +1,776 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* CSS Variables for Colors and Fonts */
+:root {
+
+    /* Colors */
+
+    --primary-color: #212121; 
+    --accent-color: #FFC400FF;  
+    --text-color: #333;      
+    --overlay-color: rgba(0, 0, 0, 0.8);
+    --white: #fff;           
+    --light-grey: #555; 
+    --button-color: #3c1246;     
+    
+    /* Fonts */
+
+    --body-font: 'Poppins', sans-serif; 
+    --heading-font: 'Playfair Display', serif; 
+}
+
+/* Body Text and Title Font */
+
+html, body {
+    height: 100%;
+    font-family: var(--body-font);
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin-top: 0; 
+}
+
+/* Equal spacing for all Titles*/
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 20px;
+}
+
+/* Equal spacing for all Paragraphs*/
+
+p {
+    margin-top: 10px;
+    font-size: 16px
+}
+
+/* Titles (Headings) */
+
+.heading1, .heading2, .heading3, .specialheading {
+    font-family: var(--heading-font);
+}
+
+/* Heading Styles */
+
+.heading1 {
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: var(--accent-color);
+}
+
+.heading2 {
+    font-size: 32px;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.heading3 {
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: bold;
+}
+
+.specialheading {
+    font-size: 80px;
+    font-weight: bold;
+    line-height: 1.2;
+    color: var(--accent-color);
+}
+
+/* Navbar Styles */
+
+.nav {
+    background-color: var(--primary-color);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navbar Text */
+
+.nav header {
+    font-size: 36px;
+    font-family: var(--heading-font);
+}
+
+/* Navbar */
+
+.nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.nav ul li {
+    margin-left: 20px;
+}
+
+.nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+    font-size: 24px;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+}
+
+.nav ul li a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
+.nav .imageandlogo {
+    display: flex;
+    padding: 10px;
+}
+
+.imageandlogo h3{
+    margin-left: 20px;
+    margin-top: 6px;
+    
+}
+
+/* Section_one Styles (Background Image) */
+
+.section_one {
+    height: 100vh;
+    background-image: url('Images/3f9e3_470_14malle.jpg');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+/* Overlay Styles */
+
+.overlay {
+    background-color: var(--overlay-color);
+    padding: 30px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    width: 800px;
+}
+
+.overlay .heading1{
+    color: var(--accent-color);
+    position: relative;
+    margin-top: 40px;
+}
+
+
+/* Section Two Styles */
+
+.section_two {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 200px;
+    text-align: justify;
+    color: var(--white);
+}
+
+
+
+/* Flex layout for content in section_two */
+
+.section_two .content {
+    display: flex;
+    gap: 40px;
+}
+
+/* Responsive iframe (Google Maps) */
+
+.section_two iframe {
+    width: 40%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    order: 2;
+}
+
+/* Section_two Paragraph Styles */
+
+.section_two p {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.6;
+    order: 1;
+}
+
+.section_three {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 200px;
+    text-align: justify;
+    color: var(--white);
+}
+
+.section_three .content {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.section_three img {
+    width: 25%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    order: 1;
+}
+
+.section_three p {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.6;
+    order: 2;
+}
+
+.section_three .summervswinter {
+    display: flex;
+    flex-direction: row;
+    gap: 250px;
+    margin-top: 40px;
+}
+
+.summervswinter img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    order: 4;
+    margin-top: 20px;
+}
+
+.summer  {
+    display: flex;
+    flex-direction: column;
+}
+.winter {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Title_1 Styles */
+
+
+
+/* Card Container Styles */
+
+.card-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 200px;
+}
+
+/* Card Styles */
+
+.card {
+    background-color: var(--white);
+    border-radius: 10px;
+    width: 23%;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column; 
+}
+
+/* Hover effect for the card */
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Image inside Card */
+
+.card-img {
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 10px;
+}
+
+/* Card Content Styling */
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.card-content p {
+    color: var(--light-grey);
+    margin-bottom: 20px;
+}
+
+/* Button */
+
+.card-btn {
+    text-align: center;
+    background-color: var(--accent-color);
+    color: var(--button-color);
+    padding: 12px 0;
+    width: 100%;
+    border-radius: 5px;
+    font-family: var(--body-font);
+    font-weight: bold;
+    display: inline-block; 
+}
+
+
+.card-btn a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+}
+
+.card-btn:hover {
+    background-color: var(--button-color);
+    color: var(--white)
+}
+
+
+/* Footer Styles */
+.footer {
+    margin-top: 80px;
+    background-color: var(--accent-color);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.footer ul li a {
+    font-family: var(--body-font);
+    color: var(--text-color);
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.footer ul li a:hover {
+    color: var(--white);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.bottom-bit{
+    display: flex;
+    
+}
+.logo {
+    display: flex;
+    margin-left: 640px;
+    margin-top: 40px;
+    
+    
+    
+    
+ 
+   
+}
+
+.logo h3{
+    margin-left: 10px;
+    margin-top: 25px;
+}
+.socials {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-left: 650px;
+    margin-top: 60px;
+    gap: 20px;
+    
+}
+
+
+
+
+
+
+
+
+/* VISIT */
+
+/* Background Image */
+
+.imagebackground_3 {
+    height: 100vh;
+    background-image: url('Images/cala\ figuera.jpg');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+
+
+
+/* Section_four Styles */
+.section_four {
+    margin-left: 200px;
+    margin-right: 200px;
+    text-align: justify;
+    color: var(--white);
+
+}
+
+.section_four .content {
+    display: flex;
+    
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+/* Responsive iframe (Youtube Video) */
+
+.section_four iframe {
+    width: 250%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    order: 2;
+}
+
+
+.container_one {
+    display: flex;
+    gap: 20px; 
+    align-items: baseline ;
+}
+
+
+.image_row {
+    display: flex; 
+    justify-content: space-between; 
+}
+
+.image_row img {
+    width: 23%; 
+    height: auto; 
+    margin-bottom: 80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*ACTIVITIES AND EVENTS*/
+
+/* Background Image */
+
+.imagebackground_2 {
+    height: 100vh;
+    background-image: url('Images/ZZZZZZZZZZZZZZZZZZZZZ.jpg');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+.ae_mains_title {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 40px;
+    
+}
+
+/* Title_1 Styles */
+
+.etitle_1 {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 40px;
+    color: var(--white);
+}
+
+.title_1 {
+    margin-left: 200px;
+    margin-bottom: 40px;
+    color: var(--white);
+}
+
+/* Background Image Layer */
+
+.imagelayer_1 {
+    margin-left: 200px;
+    margin-right: 200px;
+    background-image: url('Images/christmas-marlet-palma-img01.jpg');
+    background-position: center center;
+    background-size: cover;
+    margin-bottom: 40px;
+    border-radius: 40px;
+}
+
+/* Overlay_2 Styles + Content */
+
+.overlay_2 {
+    background-color: var(--overlay-color);
+    padding: 20px;
+    border-radius: 15px;
+    color: var(--white);
+    background-size: cover;
+    width: 50%;
+}
+
+
+    
+.text-btn {
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+    
+    
+}
+
+
+
+.ovl_2 .heading1 {
+    color: var(--accent-color);
+}
+
+.ovl_2 p {
+    color: var(--white);
+   
+}
+
+
+
+/*Background Image*/
+
+.imagebackground_4 {
+    position: relative;
+    height: 100vh;
+    background-image: url('Images/Mallorca-poram-1950.jpg');
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+
+.section_activities img {
+    width: 30%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    order: 1;
+}
+
+/* Section Two Styles */
+
+.section_activities {
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 80px;
+    text-align: justify;
+    color: var(--white);
+}
+
+
+
+/* Flex layout for content in section_two */
+
+.section_activities .content {
+    display: flex;
+    gap: 40px;
+}
+
+
+
+
+/* Section_two Paragraph Styles */
+
+.section_activities p {
+    flex: 1;
+    font-size: 16px;
+    line-height: 1.6;
+    order: 2;
+}
+
+
+
+
+/* TRAVEL */
+
+/* Background Image */
+
+.sec_one {
+    margin-left: 200px;
+    margin-right: 200px;
+    color: var(--white);
+    margin-bottom: 200px;
+
+}
+
+/*Intro Styles*/
+
+.text_one, .intro{
+    margin-bottom: 80px;
+}
+
+.tib, .text_one .images_one {
+    display: flex;
+    gap: 20px;
+}
+
+.images_one img{
+    width: 100%;
+    height: max-content;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 80px;
+    height: 300px;
+    width: 600px;
+   
+    
+}
+
+.sec_one, .heading1{
+    margin-bottom: 40px;
+}
+
+
+.emt, .text_one .images_one {
+    display: flex;
+    gap: 20px;
+}
+
+.sec_one p{
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+/* NEWS */
+
+/* News Heading (Local) */
+
+.localnews {
+    margin-top: 250px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+/* News Heading (National) */
+
+.nationalnews {
+    margin-top: 50px;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+/*Weather Widget*/
+
+.weatherwidget {
+    position: fixed;
+    width: 100%;
+    top: 140px;
+}
+
+
+/* Card Container Styles */
+
+.card-container1 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 50px;
+    
+ 
+}
+
+/* Card Styles */
+
+.card1 {
+    background-color: var(--white);
+    border-radius: 10px;
+    width: 45%;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    display: flex;
+    height: 320px;
+}
+
+
+
+/* Image inside Card */
+
+.card1-img {
+    width: 25%;
+    height: 320px; 
+    object-fit: cover; 
+}
+
+/* Card Content Styling */
+
+.card1-content {
+    padding: 20px;
+    flex-grow: 1; 
+}
+
+.card1-content p {
+    color: var(--light-grey);
+    
+}
+
+.source {
+    display: flex;
+    flex-direction: row;
+    gap: 210px;
+    margin-bottom: 20px;
+}
+
+.card-container2 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 200px;
+ 
+}
+
+.card-container1 .card-container2 {
+    display: flex;
+    flex-direction: row;
+}
+
+.learnmore{
+    width: 40%;
+   
+}
+
